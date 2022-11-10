@@ -1,0 +1,78 @@
+
+<div class="page-content">
+
+	<div class="container-fluid">
+
+		<!-- start page title -->
+		<div class="row">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-body">
+
+						<h4 class="card-title">Ürün ekle</h4>
+						<p class="card-title-desc">Lütfen bilgileri giriniz</p>
+						<form action="<?php echo base_url("product/save"); ?>" method="post" enctype="multipart/form-data">
+							<div class="mb-3 row">
+								<label for="example-text-input" class="col-md-2 col-form-label">Ürün adı</label>
+								<div class="col-md-10">
+									<input class="form-control" type="text" name="title" value="" id="example-text-input">
+									<?php if(isset($form_error)){ ?>
+										<small class="pull-right input-form-error"> <?php echo form_error("title"); ?></small>
+									<?php } ?>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="example-search-input" class="col-md-2 col-form-label">Açıklama</label>
+								<div class="col-md-10">
+									<textarea id="elm1"  name="description"></textarea>
+								</div>
+
+							</div>
+
+
+
+							<div class="mb-3 row">
+								<label class="col-md-2 col-form-label">Kategori</label>
+								<div class="col-md-10">
+									<select class="form-select" name="category_id" >
+										<?php foreach($categories as $category) { ?>
+											<option  value="<?php echo $category->id; ?>"><?php echo $category->title; ?></option>
+										<?php } ?>
+									</select>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-6">
+
+									<div class="mt-3">
+										<label >Fotoğraf seçiniz</label>
+										<input type="file" name="img_url" class="form-control"  id="formFile">
+									</div>
+								</div>
+							</div>
+							<div class="d-flex flex-wrap gap-2 mt-4">
+
+								<button type="submit" class="btn btn-info waves-effect waves-light">Kaydet</button>
+
+								<a href="<?php echo base_url("product")?>"
+								<button type="button" class="btn btn-danger waves-effect waves-light">İptal</button>
+								</a>
+							</div>
+
+
+						</form>
+
+					</div>
+
+				</div>
+			</div> <!-- end col -->
+
+
+		</div>
+		<!-- end row -->
+	</div> <!-- container-fluid -->
+</div>
+
+
+
