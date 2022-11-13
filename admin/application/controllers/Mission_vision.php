@@ -10,7 +10,7 @@ class Mission_vision extends CI_Controller
 //			redirect(base_url("login"));
 //		}
 		$this->load->model("mission_vision_model");
-		$this->load->model("mission_vision_model");
+		$this->load->helper('text');
 
 		$this->viewFolder = "mission_vision_v";
 		$this->load->library("session");

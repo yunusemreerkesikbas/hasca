@@ -6090,8 +6090,10 @@ header.style-4.style-5 .main-nav ul li ul.sub-menu>li a.active {
 }
 
 .portfolio-item3 img {
-    width: 100%;
-    transition: all 620ms ease-in-out 25ms
+	width: 100%;
+	transition: all 620ms ease-in-out 25ms;
+	height: 416px;
+	object-fit: cover;
 }
 
 .portfolio-item3 .overlay {
@@ -6839,7 +6841,7 @@ header.style-4.style-5 .main-nav ul li ul.sub-menu>li a.active {
 }
 
 .single-team2.style-2 .team-image .social-area {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #27AE60 83.33%)
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #7d532a 100%)
 }
 
 .single-team2.style-2 .team-image .social-area:hover .social-links {
@@ -6925,6 +6927,12 @@ header.style-4.style-5 .main-nav ul li ul.sub-menu>li a.active {
         display: none;
         visibility: hidden
     }
+	.phone-header{
+		display: none;
+	}
+	#dansimahatti{
+		right: 0;
+	}
 }
 
 .client-vdo-area {
@@ -7236,6 +7244,9 @@ header.style-4.style-5 .main-nav ul li ul.sub-menu>li a.active {
         margin-bottom: 50px;
         padding: 40px 30px 30px
     }
+	#dansimahatti{
+		right: 0;
+	}
 }
 
 .testimonial-single3 .author-area {
@@ -7291,6 +7302,9 @@ header.style-4.style-5 .main-nav ul li ul.sub-menu>li a.active {
     .testimonial-single3.style-3 {
         padding-bottom: 25px
     }
+	#dansimahatti{
+		right: 0!important;
+	}
 }
 
 .testimonial-single3.style-3 p.para {

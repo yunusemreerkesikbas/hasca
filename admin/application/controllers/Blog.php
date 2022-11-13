@@ -10,7 +10,8 @@ class Blog extends CI_Controller
 			redirect(base_url("login"));
 		}
 		$this->load->model("blog_model");
-		$this->load->model("blog_model");
+		$this->load->helper('text');
+
 
 		$this->viewFolder = "blog_v";
 		$this->load->library("session");

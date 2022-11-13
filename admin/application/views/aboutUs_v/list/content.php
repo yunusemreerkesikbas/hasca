@@ -75,7 +75,7 @@
 											<?php echo $item->url ?>
 										</td>
 										<td>
-											<?php echo $item->description ?>
+											<?php echo character_limiter($item->description,50)  ?>
 										</td>
 
 										<td>

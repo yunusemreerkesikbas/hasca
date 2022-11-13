@@ -10,7 +10,7 @@ class AboutUs extends CI_Controller
 			redirect(base_url("login"));
 		}
 		$this->load->model("aboutUs_model");
-		$this->load->model("aboutUs_model");
+		$this->load->helper('text');
 
 		$this->viewFolder = "aboutUs_v";
 		$this->load->library("session");
@@ -21,7 +21,9 @@ class AboutUs extends CI_Controller
 
 		/** Tablodan Verilerin Getirilmesi.. */
 		$items = $this->aboutUs_model->get_all(
-			array()
+			array(
+				"isActive"  => 1
+			)
 		);
 
 		/** View'e gönderilecek Değişkenlerin Set Edilmesi.. */

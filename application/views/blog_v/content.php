@@ -43,7 +43,7 @@
 					</div>
 					<div class="blog-content hover-border1">
 						<span>Kahve</span>
-						<h4><a href="blog-details.html">Kahvenin hatırı kaç yıldır? </a>
+						<h4><a href="<?php echo base_url("blog/$blog->id")?>">Kahvenin hatırı kaç yıldır? </a>
 						</h4>
 						<div class="blog-meta">
 

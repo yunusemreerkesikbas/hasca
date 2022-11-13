@@ -63,7 +63,7 @@
 										<div class="single-team2 style-2 wow fadeInDown" data-wow-duration="1.5s"
 											 data-wow-delay="0.2s">
 											<div class="team-image">
-												<img src="<?php echo base_url("admin/uploads/product_v/$product->img_url"); ?>"
+												<img style="object-fit: contain" src="<?php echo base_url("admin/uploads/product_v/$product->img_url"); ?>"
 													 alt="<?php echo $product->title?>">
 												<div class="social-area gap-3">
 

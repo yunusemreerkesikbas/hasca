@@ -19,7 +19,7 @@
     <div class="menu-toggle-wrap bg-white">
         <div class="sidebar-top-area d-flex justify-content-between align-items-center">
             <div class="sidebar-logo px-4 py-3 rounded">
-                <a href="index.php"><img src="<?php echo base_url("assets")?>/assets/img/hasca-logo-siyah.svg" style="width: 165px;" alt="image"></a>
+                <a href="<?php echo base_url()?>"><img src="<?php echo base_url("assets")?>/assets/img/hasca-logo-siyah.svg" style="width: 165px;" alt="image"></a>
             </div>
             <div class="cross-icon">
                 <i class='bx bx-x'></i>
@@ -61,29 +61,12 @@
     </div>
 </div>
 
-<div class="mobile-search">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-11">
-                <label>What are you lookking for?</label>
-                <input type="text" placeholder="Search Products, Category, Brand">
-            </div>
-            <div class="col-1 d-flex justify-content-end align-items-center gap-2">
-                <div class="search-cross-btn">
-                    <i class='bx bx-search-alt-2'></i>
-                </div>
-                <div class="search-cross-btn">
-                    <i class="bi bi-x"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 
 <header class="header-area style-1">
     <div class="header-logo">
-        <a href="index.php"><img alt="image" src="<?php echo base_url("assets")?>/assets/img/hasca-logo.svg"></a>
+        <a href="<?php echo base_url()?>"><img alt="image" src="<?php echo base_url("assets")?>/assets/img/hasca-logo.svg"></a>
     </div>
     <div class="main-nav">
         <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
@@ -95,42 +78,36 @@
             </div>
         </div>
         <ul class="menu-list" id="menu">
-            <li><a href="contact.html">Anasayfa </a></li>
+            <li><a href="<?php echo base_url("")?>">Anasayfa </a></li>
 
             <li class="menu-item-has-children">
                 <a href="#" class="drop-down">Kurumsal</a><i class='bi bi-chevron-down dropdown-icon'></i>
                 <ul class="sub-menu">
-                    <li><a href="about.html">Hakkımızda</a></li>
-                    <li><a href="team.html">Vizyon & Misyon</a></li>
-                    <li><a href="faq.html">Üretim</a></li>
+                    <li><a href="<?php echo base_url("hakkimizda")?>">Hakkımızda</a></li>
+                    <li><a href="<?php echo base_url("vizyon-misyon")?>">Vizyon & Misyon</a></li>
+                    <li><a href="<?php echo base_url("uretim")?>">Üretim</a></li>
                 </ul>
             </li>
             <li class="menu-item-has-children">
-                <a href="service.html" class="drop-down">Ürünlerimiz</a><i class='bi bi-chevron-down dropdown-icon'></i>
-                <ul class="sub-menu">
-                    <li><a href="#">Kahve</a></li>
-                    <li><a href="#">Kuruyemiş</a></li>
-                    <li><a href="#">Lokum</a></li>
-                </ul>
+                <a href="<?php echo base_url("urunlerimiz")?>" >Ürünlerimiz</a><i class='bi bi-chevron-down dropdown-icon'></i>
+
             </li>
             <li class="menu-item-has-children">
-                <a href="#" class="drop-down">Medya</a><i class='bi bi-chevron-down dropdown-icon'></i>
+                <a href="<?php echo base_url("galeri")?>" class="drop-down">Medya</a><i class='bi bi-chevron-down dropdown-icon'></i>
                 <ul class="sub-menu">
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Galeri</a></li>
+                    <li><a href="<?php echo base_url("blog")?>">Blog</a></li>
+                    <li><a href="<?php echo base_url("galeri")?>">Galeri</a></li>
 
                 </ul>
             </li>
 
-            <li><a href="#">E-KATALOG</a></li>
-            <li><a href="#">İletişim</a></li>
+            <li><a href="<?php echo base_url("katalog")?>">E-KATALOG</a></li>
+            <li><a href="<?php echo base_url("iletisim")?>">İletişim</a></li>
         </ul>
 
     </div>
     <div class="nav-right d-flex align-items-center gap-5" id="dansimahatti">
-        <div class="mobile-menu-btn d-lg-none d-block">
-            <h5 class="text-white mb-0">MENU</h5>
-        </div>
+
 
         <div class="phone-header">
             <div class="phone">

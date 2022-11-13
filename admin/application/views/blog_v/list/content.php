@@ -49,7 +49,6 @@
 
 									<th class="align-middle">Fotoğraf</th>
 									<th class="align-middle">Başlık</th>
-									<th class="align-middle">Url</th>
 									<th class="align-middle">Açıklama</th>
 									<th class="align-middle"> Durumu</th>
 									<th class="align-middle">İşlemler</th>
@@ -71,11 +70,9 @@
 										<td>
 											<?php echo $item->title ?>
 										</td>
+
 										<td>
-											<?php echo $item->url ?>
-										</td>
-										<td>
-											<?php echo $item->description ?>
+											<?php echo character_limiter($item->description,50)  ?>
 										</td>
 
 										<td>

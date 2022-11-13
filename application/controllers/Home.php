@@ -16,6 +16,7 @@ class Home extends CI_Controller {
 		$viewData = new stdClass();
 
 		$this->load->model("aboutUs_model");
+		$this->load->model("mission_vision_model");
 		$this->load->model("product_category_model");
 		$this->load->model("blog_model");
 		$this->load->model("reference_model");
@@ -36,6 +37,7 @@ class Home extends CI_Controller {
 				"isActive" => 1
 			)
 		);
+
 		$references = $this->reference_model->get_all(
 			array(
 				"isActive" => 1
@@ -46,15 +48,21 @@ class Home extends CI_Controller {
 				"isActive" => 1
 			)
 		);
+		$mission_vision = $this->mission_vision_model->get_all(
+			array(
+				"isActive" => 1
+			)
+		);
 
 		$viewData->slider = $slider;
 		$viewData->about = $about;
 		$viewData->categories = $categories;
 		$viewData->blogs = $blogs;
 		$viewData->references = $references;
+		$viewData->about = $about;
+		$viewData->mission_vision = $mission_vision;
 		$viewData->viewFolder   = "home_v";
 		$this->load->view($viewData->viewFolder, $viewData);
-
 
 	}
 
@@ -120,7 +128,7 @@ class Home extends CI_Controller {
 
 	}
 
-	public function product_detail($url = ""){
+	public function blog_detail($url = ""){
 
 		$viewData = new stdClass();
 		$viewData->viewFolder = "blog_v";

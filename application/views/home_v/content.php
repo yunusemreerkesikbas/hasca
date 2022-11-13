@@ -1,67 +1,74 @@
 
-<div class="banner-section2">
-	<div class="swiper banner2">
-		<div class="swiper-wrapper">
-			<?php foreach ($slider as $slide) { ?>
-				<style>
-					.slider-bg-1::before{
-						content: "";
-						background-image: <?php echo base_url("admin/uploads/slider_v/$slide->img_url")?>;
-						background-color: rgba(0, 1, 12, .5);
-						background-blend-mode: multiply;
-						background-size: cover;
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						top: 0;
-						left: 0;
-						right: 0;
-						z-index: -9;
-						animation: large 26s linear infinite alternate
-					}
-
-				</style>
-				<div class="swiper-slide">
-					<div class="slider-bg-1" >
-						<div class="container">
-							<div class="row d-flex justify-content-center align-items-center">
-								<div class="col-xl-7 col-lg-10">
-									<div class="banner2-content">
-										<h1><?php echo $slide->title?></h1>
-										<a href="<?php echo base_url("urunlerimiz")?>" class="eg-btn btn--primary2 btn--lg">Ürünlerimiz</a>
-									</div>
-								</div>
-
-
-							</div>
-						</div>
-					</div>
-				</div>
-			<?php } ?>
-		</div>
-	</div>
-	<div class="banner2-pagination d-flex justify-content-center flex-row align-items-center gap-2"></div>
-</div>
+<!--<div class="banner-section2">-->
+<!--	<img src="assets/images/icons/banner2-spring.svg" class="banner2-spring1" alt="image">-->
+<!--	<img src="assets/images/icons/banner2-spring.svg" class="banner2-spring2" alt="image">-->
+<!--	<img src="assets/images/icons/banner2-circle.svg" class="banner2-circle1" alt="image">-->
+<!--	<img src="assets/images/icons/banner2-circle.svg" class="banner2-circle2" alt="image">-->
+<!--	<img src="assets/images/bg/banner2-vector.png" class="banner2-vector" alt="image">-->
+<!--	<ul class="banner-social2 gap-5">-->
+<!--		<li><a href="https://www.twitter.com/">Twitter</a></li>-->
+<!--		<li><a href="https://www.facebook.com/">Facebook</a></li>-->
+<!--		<li><a href="https://www.instagram.com/">Instagram</a></li>-->
+<!--	</ul>-->
+<!--	<div class="swiper banner2">-->
+<!--		<div class="swiper-wrapper">-->
+<!--			<div class="swiper-slide">-->
+<!--				<div class="slider-bg-1">-->
+<!--					<div class="container">-->
+<!--						<div class="row d-flex justify-content-center align-items-center">-->
+<!--							<div class="col-xl-7 col-lg-10">-->
+<!--								<div class="banner2-content">-->
+<!--									<span>Wellcome to Our Agency</span>-->
+<!--									<h1>Smart Brand Ideas for your are Here</h1>-->
+<!--									<p>Get the most of reduction in your team’s operating costs for the whole-->
+<!--										product which creates amazing UI/UX experiences.</p>-->
+<!--									<a href="project.html" class="eg-btn btn--primary2 btn--lg">Discover More</a>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="swiper-slide">-->
+<!--				<div class="slider-bg-2">-->
+<!--					<div class="container">-->
+<!--						<div class="row d-flex justify-content-center align-items-center">-->
+<!--							<div class="col-xl-7 col-lg-10">-->
+<!--								<div class="banner2-content">-->
+<!--									<span>Welcome To Auction House</span>-->
+<!--									<h2>Creative To Plan Your Business Company</h2>-->
+<!--									<p>Nulla facilisi. Maecenas ac tellus ut ligula interdum convallis.-->
+<!--										Suspendisse sit amet turpina sagittis, ultrices dui et, aliquam urna.-->
+<!--									</p>-->
+<!--									<a href="project.html" class="eg-btn btn--primary2 btn--lg">Start Exploring</a>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<div class="banner2-pagination d-flex justify-content-center flex-row align-items-center gap-2"></div>-->
+<!--</div>-->
 
 <div class="about-section3 position-relative overflow-hidden pt-120" id="about">
 	<div class="container-fluid">
 		<div class="row justify-content-center align-items-center g-4">
+			<?php foreach ($about as $abouts) {
+
+			} ?>
 			<div class="col-xl-7 col-lg-6 wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-				<img src="<?php echo base_url("assets") ?>/assets/images/bg/about-bg-2.jpg"
+				<img src="<?php echo base_url("admin/uploads/aboutUs_v/$abouts->img_url") ?>"
 					 class="img-fluid about4-image" alt="image">
 			</div>
 			<div class="col-xl-5 col-lg-6">
 				<div class="about3-content style-2 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay=".2s">
-					<h3>Geçmişten aldığımız güçle, geleceğe daha güçlü bakıyoruz.</h3>
-					<p class="para">Lorem Ipsum is simply dumm of free available in market the way printing and
-						typesetting industry has been the industry's standard dummy text ever.</p>
-					<ul class="about3-list">
-						<li>Price of additional materials or parts (if needed)</li>
-						<li>Transportation cost for carrying new materials/parts</li>
-						<li>You will get 100% money back offer.</li>
-					</ul>
+					<h3><?php echo $abouts->title?></h3>
+					<p class="para"><?php echo $abouts->description ?></p>
+
 					<div class="about-footer d-flex jusify-content-start align-items-center flex-wrap gap-4">
-						<a href="about.html" class="eg-btn btn--primary2 btn--lg">DAHA FAZLA</a>
+						<a href="<?php echo base_url("hakkimizda") ?>" class="eg-btn btn--primary2 btn--lg">DAHA FAZLA</a>
 						<div class="experience d-flex flex-row align-items-center">
 							<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
 								<g clip-path="url(#clip0_445_100)">
@@ -89,127 +96,37 @@
 
 
 
-<!--<div class="portfolio-section pt-120 pb-120">-->
-<!--	<div class="container">-->
-<!--		<div class="row justify-content-center">-->
-<!--			<div class="col-lg-6 col-md-8 col-sm-10">-->
-<!--				<div class="section-title3 primary1 text-cener">-->
-<!--					<span>-Kategoriler-</span>-->
-<!--					<h3>Ürünlerimiz</h3>-->
-<!---->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--		<div class="row justify-content-center align-items-start g-4 position-relative">-->
-<!---->
-<!--			<img src="--><?php //echo base_url("assets") ?><!--/assets/images/bg/portfolio-vctor.png" alt="image"-->
-<!--				 class="portfolio-vector img-fluid">-->
-<!--			--><?php //foreach ($categories as $category) { ?>
-<!--				<div class="col-lg-4 col-md-6 col-sm-10">-->
-<!--					<div class="portfolio-item3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">-->
-<!--						<img src="--><?php //echo base_url("admin/uploads/product_category_v/$category->img_url") ?><!--"-->
-<!--							 alt="--><?php //echo $category->title ?><!--">-->
-<!--						<div class="overlay">-->
-<!--							<div class="overlay-content">-->
-<!--								<p>--><?php //echo $category->title ?><!--</p>-->
-<!--								<a href="--><?php //echo base_url("urunlerimiz") ?><!--"><i class="bi bi-arrow-up-right"></i></a>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</div>-->
-<!---->
-<!--			--><?php //} ?>
-<!---->
-<!--		</div>-->
-<!--	</div>-->
-<!--</div>-->
 <div class="portfolio-section pt-120 pb-120">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-6 col-md-8 col-sm-10">
-				<div class="section-title3 primary3 text-cener">
-					<span>-Creative Portfolio-</span>
-					<h3>Our Work Example</h3>
-					<p>Get the most of reduction in your team’s operating costs for the whole product which creates
-						amazing UI/UX experiences.</p>
+				<div class="section-title3 primary1 text-cener">
+					<span>-Kategoriler-</span>
+					<h3>Ürünlerimiz</h3>
+
 				</div>
 			</div>
 		</div>
 		<div class="row justify-content-center align-items-start g-4 position-relative">
-			<img src="assets/images/bg/dot-squire.svg" alt="image" class="dot-squire img-fluid">
-			<img src="assets/images/bg/portfolio-vctor.png" alt="image" class="portfolio-vector img-fluid">
-			<div class="col-lg-4 col-md-6 col-sm-10">
-				<div class="portfolio-item3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
-					<img src="assets/images/bg/portfolio31.png" alt="image">
-					<div class="overlay">
-						<div class="overlay-content">
-							<p>Plugin</p>
-							<h4><a href="project-details.html">Pocket-Sized Notebooks Hold Minia Ture.</a></h4>
-							<a href="project-details.html"><i class="bi bi-arrow-up-right"></i></a>
+
+			<img src="<?php echo base_url("assets") ?>/assets/images/bg/portfolio-vctor.png" alt="image"
+				 class="portfolio-vector img-fluid">
+			<?php foreach ($categories as $category) { ?>
+				<div class="col-lg-4 col-md-6 col-sm-10">
+					<div class="portfolio-item3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+						<img src="<?php echo base_url("admin/uploads/product_category_v/$category->img_url") ?>"
+							 alt="<?php echo $category->title ?>">
+						<div class="overlay">
+							<div class="overlay-content">
+								<p><?php echo $category->title ?></p>
+								<a href="<?php echo base_url("urunlerimiz") ?>"><i class="bi bi-arrow-up-right"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-10">
-				<div class="portfolio-item3 mt-50 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
-					<img src="assets/images/bg/portfolio32.png" alt="image">
-					<div class="overlay">
-						<div class="overlay-content">
-							<p>Mockup</p>
-							<h4><a href="project-details.html">A4 Size Flyer Mockup Design.</a></h4>
-							<a href="project-details.html"><i class="bi bi-arrow-up-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-10">
-				<div class="portfolio-item3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
-					<img src="assets/images/bg/portfolio33.png" alt="image">
-					<div class="overlay">
-						<div class="overlay-content">
-							<p>Ui Illustration</p>
-							<h4><a href="project-details.html">Ui/Ux Illustration Design..</a></h4>
-							<a href="project-details.html"><i class="bi bi-arrow-up-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-10">
-				<div class="portfolio-item3 mt-minus50 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".8s">
-					<img src="assets/images/bg/portfolio34.png" alt="image">
-					<div class="overlay">
-						<div class="overlay-content">
-							<p>Box Mockup</p>
-							<h4><a href="project-details.html">PPocket-Sized Notebooks Ture Paintings</a></h4>
-							<a href="project-details.html"><i class="bi bi-arrow-up-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-10">
-				<div class="portfolio-item3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
-					<img src="assets/images/bg/portfolio35.png" alt="image">
-					<div class="overlay">
-						<div class="overlay-content">
-							<p>Web</p>
-							<h4><a href="project-details.html">Amazing web card design with overlay.</a></h4>
-							<a href="project-details.html"><i class="bi bi-arrow-up-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-10">
-				<div class="portfolio-item3 mt-minus50 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.2s">
-					<img src="assets/images/bg/portfolio36.png" alt="image">
-					<div class="overlay">
-						<div class="overlay-content">
-							<p>SEO</p>
-							<h4><a href="project-details.html">SEO Optimization for your website.</a></h4>
-							<a href="project-details.html"><i class="bi bi-arrow-up-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
+
+			<?php } ?>
+
 		</div>
 	</div>
 </div>
@@ -291,8 +208,7 @@
 			</div>
 		</div>
 		<div class="row justify-content-center position-relative">
-			<img src="<?php echo base_url("assets") ?>/assets/images/bg/portfolio-vctor.png" alt="image"
-				 class="blog-vector img-fluid">
+
 			<div class="swiper blog-slider swiper-fix">
 				<div class="swiper-wrapper">
 					<?php foreach ($blogs as $blog) { ?>
@@ -302,7 +218,7 @@
 								 alt="image">
 							<div class="content">
 								<span><?php echo $blog->title?> </span>
-								<h4><a href="blog-details.html"><?php echo $blog->description ?></a></h4>
+								<h4><a href="<?php echo base_url("blog/$blog->url") ?>"><?php echo $blog->description ?></a></h4>
 								<p class="para">The product manager job titleis fast becom ing on of the hottest
 									business.</p>
 								<div class="meta">
