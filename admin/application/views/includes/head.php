@@ -6,7 +6,7 @@
 
 <title><?php echo $settings->site_title?> </title>
 
-<link rel="shortcut icon" sizes="196x196" href="<?php echo base_url("assets"); ?>/assets/images/logo.png">
+<link rel="shortcut icon" sizes="196x196" href="<?php echo base_url("admin/uploads/settings_v/$settings->logo"); ?>">
 <link rel="shortcut icon" href="<?php echo base_url("assets"); ?>/assets/images/favicon.ico">
 
 <?php $this->load->view("includes/include_style"); ?>
